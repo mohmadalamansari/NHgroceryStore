@@ -28,7 +28,7 @@ const Home = () => {
     //help to show image that r store in product (M)
     const productData = useSelector((state) => state.product.productList);
     console.log(productData)
-    const homeProductCartList = productData.slice(11, 15);
+    const homeProductCartList = productData.slice(1,5);
 
     //fetching categories of vegetables 
     const homeProductCartListvegetables = productData.filter(el => el.category === "fruits", [])

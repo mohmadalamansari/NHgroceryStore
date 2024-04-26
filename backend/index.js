@@ -14,10 +14,17 @@ const PORT = process.env.PORT || 8080;
 
 //mongodb connection
 mongoose.set("strictQuery", false);
-mongoose
-  .connect(process.env.MONGODB_URL)
-  .then(() => console.log("Connect to Databse"))
-  .catch((err) => console.log(err));
+
+const connect = async () => {
+  try {
+    await mongoose.connect('mongodb+srv://alamrehan123:nasim123456@cluster1.qb9iyri.mongodb.net/NH?retryWrites=true&w=majority&appName=Cluster1')
+    console.log("Conneted")
+  } catch (err) {
+    console.log(err.message)
+  }
+}
+
+connect();
 
 //schema
 const userSchema = mongoose.Schema({
@@ -150,7 +157,7 @@ app.post("/checkout-payment", async (req, res) => {
       }),
       sucess_url: `${process.env.FRONTEND_URL}/success`,
       cancel_url: `${process.env.FRONTEND_URL}/cancel`,
-      
+
 
     }
 
