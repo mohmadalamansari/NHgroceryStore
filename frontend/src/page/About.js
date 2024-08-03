@@ -21,6 +21,11 @@ const locations = [
     timings: 'Mon-Sat 9am to 5pm.',
     address: 'kaliya-15 bara',
   },
+  {
+    title: 'kaliya  office',
+    timings: 'Mon-Sat 9am to 5pm.',
+    address: 'iuwgduywegduyegwdyuwuydgwudgyugwduysgxuy - 15 bara',
+  },
 ]
 
 const users = [
